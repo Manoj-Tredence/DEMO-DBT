@@ -1,7 +1,7 @@
 select
 * 
 from
-{{ source('demo', 'WEATHER') }}
+{{ source('demo', 'BIKE') }}
 
-limit 10
+
 

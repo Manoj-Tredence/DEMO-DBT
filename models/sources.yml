@@ -3,6 +3,5 @@ sources:
     database: demo
     schema: DEMO_SCHEMA
     tables:
-      - name: WEATHER
-      - name: WEATHERTABLE
+      - name: BIKE
     
