@@ -21,19 +21,11 @@ FINAL AS (
             ELSE 'BUSINESSDAY'
         END AS DAY_TYPE,
 
-        CASE
-            WHEN MONTH(STARTED_AT_TS) IN (12, 1, 2)
-                THEN 'WINTER'
-            WHEN MONTH(STARTED_AT_TS) IN (3, 4, 5)
-                THEN 'SUMMER'
-            WHEN MONTH(STARTED_AT_TS) IN (6, 7, 8)
-                THEN 'RAINY'
-            ELSE 'AUTUMN'
-        END AS SEASON
+    {{ get_season('STARTED_AT_TS') }} AS SEASON
 
-    FROM CTE
+    from CTE
 
 )
 
-SELECT *
-FROM FINAL
+select * from FINAL
+
